@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Base styles for Light Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --circle-border: #000000;
+}
+
+/* Styles for Dark Mode */
+.dark {
+    --bg-color: #0f172a;      /* Deep Slate Blue */
+    --text-color: #171818;    /* Off-white */
+    --circle-border: #fbbf24; /* Amber-400 (matches your HTML) */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* This makes the color swap feel high-end and smooth */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#clock-display {
+    border-color: var(--circle-border);
+    transition: border-color 0.5s ease;
+}
+
+#colon1, #colon2 {
+    visibility: hidden;
+}
